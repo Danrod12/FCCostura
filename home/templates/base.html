@@ -4,9 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Mi Proyecto{% endblock %}</title>
+
+    {% load static %}
     <!-- Font Awesome CDN -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <!-- CSS básico para hacer la página atractiva -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
     <style>
         body {
             font-family: 'Open Sans', sans-serif;
@@ -47,6 +51,28 @@
             text-align: center;
             padding: 10px;
         }
+
+    .contacto-metodos {
+        display: flex;
+        justify-content: center; /* centra horizontalmente */
+        gap: 40px;               /* espacio entre los métodos */
+        margin-top: 20px;        /* separa un poco del header */
+        margin-bottom: 20px;
+    }
+
+    .contacto-metodos .metodo {
+        display: flex;
+        flex-direction: column; /* ícono arriba, texto abajo */
+        align-items: center;
+        font-size: 18px;
+        font-weight: 500;
+    }
+<div class="contenedor-de-imagenes">
+  <p>Damos vida a tus personajes favoritos...</p>
+  
+  <img class="imagen-izquierda" src="ruta/a/tu/imagen1.jpg">
+  <img class="imagen-derecha" src="ruta/a/tu/imagen2.jpg">
+</div>
     </style>
 </head>
 <body>

@@ -1,8 +1,17 @@
 {% extends 'base.html' %}
+{% load static %}
+
 {% block content %}
 
-<h2>Damos vida a tus personajes favoritos</h2>
-
-
+<div class="contenedor-de-imagenes">
+    <h1>Damos vida a tus personajes favoritos</h1>
+    <h2>Cosplay y disfraces únicos, hechos a medida.</h2>
+    <p>En Pablo Costura, transformamos tus sueños en realidad con nuestros disfraces y cosplays personalizados. Ya sea que busques un atuendo para una convención, una fiesta temática o simplemente quieras lucir espectacular, estamos aquí para ayudarte a destacar.</p>
+    
+    <img class="decoracion-izquierda" src="{% static 'fondo1.jpg' %}" alt="Descripción de la imagen">
+    
+    <img class="decoracion-derecha" src="{% static 'ruta/a/tu/imagen_derecha.jpg' %}" alt="Descripción de la imagen">
+    
+</div>
 
 {% endblock %}
