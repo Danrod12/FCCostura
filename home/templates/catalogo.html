@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- aquí va el contenido de tu HTML actual -->
+
+
+<!-- Catálogo de Pablo Costura -->
+<section class="p-8 bg-white">
+
+  <h1 class="text-4xl font-bold text-center mb-10 text-gray-900">
+    Catálogo de Disfraces y Cosplays
+  </h1>
+
+  <!-- Grupo 1 -->
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4 border-b border-gray-300 pb-2">
+    Cosplays y Personajes Famosos
+  </h2>
+  <div class="flex flex-wrap justify-center gap-6">
+    <!-- Aquí van las imágenes de este grupo -->
+    <img src="{% static 'decoration/fondo1.jpg' %}" alt="Cosplay ejemplo 1"
+         class="w-64 h-80 object-cover rounded-2xl shadow-md hover:shadow-lg transition" />
+    <img src="{% static 'decoration/fondo2.jpg' %}" alt="Cosplay ejemplo 2"
+         class="w-64 h-80 object-cover rounded-2xl shadow-md hover:shadow-lg transition" />
+  </div>
+
+  <!-- Grupo 2 -->
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4 border-b border-gray-300 pb-2">
+    Uniformes Profesionales
+  </h2>
+  <div class="flex flex-wrap justify-center gap-6">
+    <!-- Aquí van las imágenes de este grupo -->
+    <img src="{% static 'decoration/fondo3.jpg' %}" alt="Uniforme ejemplo"
+         class="w-64 h-80 object-cover rounded-2xl shadow-md hover:shadow-lg transition" />
+  </div>
+
+  <!-- Grupo 3 -->
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4 border-b border-gray-300 pb-2">
+    Disfraces Personalizados y Creativos
+  </h2>
+  <div class="flex flex-wrap justify-center gap-6">
+    <!-- Aquí puedes agregar los que sean inventados, originales o únicos -->
+    <img src="{% static 'decoration/fondo4.jpg' %}" alt="Disfraz personalizado ejemplo"
+         class="w-64 h-80 object-cover rounded-2xl shadow-md hover:shadow-lg transition" />
+  </div>
+
+  <!-- Grupo 4 -->
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4 border-b border-gray-300 pb-2">
+    Decoración y Exhibición
+  </h2>
+  <div class="flex flex-wrap justify-center gap-6">
+    <!-- Imágenes opcionales, fondos o elementos decorativos -->
+    <img src="{% static 'decoration/fondo5.jpg' %}" alt="Decoración o fondo"
+         class="w-64 h-80 object-cover rounded-2xl shadow-md hover:shadow-lg transition" />
+  </div>
+
+</section>
+
+
+{% endblock %}

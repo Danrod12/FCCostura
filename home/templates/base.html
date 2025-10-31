@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <title>{% block title %}Mi Proyecto{% endblock %}</title>
 
+    <!-- TailwindCSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+
     {% load static %}
     <!-- Font Awesome CDN -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
@@ -80,13 +84,13 @@
         <h1>Funny Clan Estudio Creativo </h1>
         <nav>
         <a href="{% url 'inicio' %}" class="{% if request.path == '/' %}active{% endif %}"><i class="fas fa-home"></i> Inicio</a>
-        <a href="{% url 'galeria' %}"class="{% if request.path == '/galeria/' %}active{% endif %}"><i class="fas fa-info-circle"></i> Galeria</a>
-        <a href="{% url 'contacto' %}"class="{% if request.path == '/contacto/' %}active{% endif %}"><i class="fas fa-envelope"></i> Contacto</a>
+        <a href="{% url 'catalogo' %}" class="{% if request.path == '/catalogo/' %}active{% endif %}"><i class="fas fa-info-circle"></i> Catalogo</a>
+        <a href="{% url 'contacto' %}" class="{% if request.path == '/contacto/' %}active{% endif %}"><i class="fas fa-envelope"></i> Contacto</a>
         </nav>
     </header>
 
     <main>
-        {% block content %}{% endblock %}
+        {% block content %}{% endblock %}   
     </main>
 
     <footer>

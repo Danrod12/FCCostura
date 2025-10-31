@@ -7,11 +7,12 @@ def menu(request):
 def inicio(request):
     return render(request, "inicio.html")
 
-def galeria(request):
-    return render(request, "galeria.html")
+def catalogo(request):
+    return render(request, "catalogo.html")
 
 def servicios(request):
     return render(request, "servicios.html")
 
 def contacto(request):
     return render(request, "contacto.html")
+
