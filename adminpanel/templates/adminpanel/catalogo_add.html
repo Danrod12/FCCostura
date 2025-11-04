@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section class="bg-[#eae6f9] min-h-screen py-10 flex flex-col items-center">
+  <div class="bg-white rounded-2xl shadow-md p-8 w-full max-w-md border-t-8 border-[#a88432]">
+    <h1 class="text-3xl font-bold text-center mb-6 text-[#4b2c7a]">
+      Agregar nuevo al catálogo
+    </h1>
+
+    <form method="post" enctype="multipart/form-data" class="space-y-5">
+      {% csrf_token %}
+      <div>
+<label class="block font-semibold text-[#142e4a] mb-2">Imagen</label>
+
+<div class="flex items-center gap-3">
+  <input
+    type="file"
+    id="imagen"
+    name="imagen"
+    accept="image/*"
+    class="block w-full text-sm text-gray-900 border border-gray-300 rounded-md cursor-pointer bg-white focus:outline-none focus:ring-2 focus:ring-[#b1973c]"
+    onchange="document.getElementById('file-name').textContent = this.files[0]?.name || 'Ningún archivo seleccionado';"
+  />
+</div>
+
+<p id="file-name" class="mt-2 text-sm text-gray-600">Ningún archivo seleccionado</p>
+
+      </div>
+
+      <div>
+        <label class="block text-gray-800 font-semibold mb-1">Categoría</label>
+<select
+  class="border border-[#b1973c] rounded-md p-2 text-gray-800 bg-white focus:ring-2 focus:ring-[#b1973c] focus:outline-none w-full"
+  name="categoria"
+>
+  <option value="">Selecciona una categoría</option>
+  <option value="uniformes">Uniformes profesionales</option>
+  <option value="cosplays">Cosplays y personajes famosos</option>
+  <option value="accesorios">Accesorios y props</option>
+</select>
+      </div>
+
+      <div class="flex justify-between items-center pt-4">
+        <button type="submit"
+                class="bg-[#a88432] hover:bg-[#8d722b] text-white font-semibold px-5 py-2 rounded-md transition">
+          Guardar
+        </button>
+        <a href="{% url 'catalogo_list' %}" class="text-[#4b2c7a] hover:underline font-semibold">Volver</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+{% endblock %}
+
+

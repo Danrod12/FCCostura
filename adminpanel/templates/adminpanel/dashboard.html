@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="p-8 bg-gray-100 min-h-screen">
+  <h1 class="text-3xl font-bold text-gray-800 mb-6">Panel de Administración</h1>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="bg-white p-6 rounded-xl shadow">
+      <h2 class="text-xl font-semibold">Fotos / Catálogo</h2>
+      <p class="text-gray-600 mt-2">Agrega, edita o elimina imágenes del catálogo.</p>
+      <a href="#" class="inline-block mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Administrar</a>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow">
+      <h2 class="text-xl font-semibold">Información del sitio</h2>
+      <p class="text-gray-600 mt-2">Edita textos, precios o descripciones.</p>
+      <a href="#" class="inline-block mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Editar</a>
+    </div>
+  </div>
+
+  <div class="mt-8">
+    <a href="{% url 'admin_logout' %}" class="text-red-600 font-semibold">Cerrar sesión</a>
+  </div>
+</div>
+{% endblock %}

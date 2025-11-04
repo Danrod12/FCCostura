@@ -6,6 +6,12 @@ body {
   padding: 0;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #F7F7F9; /* tu color de fondo */
+}
 /* ====== IMÁGENES ====== */
 
 img {
@@ -58,12 +64,69 @@ section {
   overflow: auto; /* limpia los floats */
 }
 
-/* ====== AJUSTES RESPONSIVOS ====== */
-@media (max-width: 768px) {
-  img {
-    width: 100%;
-    height: auto;
-    float: none;
-    margin: 10px 0;
-  }
+body {
+  background-color: #F7F7F9;
+}
+
+/* ===== GALERÍA (scroll independiente por grupo) ===== */
+
+.galeria {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding-bottom: 8px;
+  scrollbar-width: none; /* Oculta barra por defecto (Firefox) */
+  -ms-overflow-style: none; /* Oculta en IE/Edge antiguos */
+}
+
+/* Oculta barra por defecto (Chrome/Safari) */
+.galeria::-webkit-scrollbar {
+  height: 8px;
+  background: transparent;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.galeria::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+/* Muestra barra solo cuando pasas el mouse sobre esa galería */
+.galeria:hover::-webkit-scrollbar {
+  opacity: 1;
+}
+
+/* Para Firefox */
+.galeria:hover {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.4) transparent;
+}
+
+/* Las imágenes dentro de la galería se alinean horizontalmente */
+.galeria .flex {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.5rem;
+}
+.galeria {
+  scroll-snap-type: x mandatory;
+}
+
+.galeria img {
+  scroll-snap-align: start;
+}
+
+select {
+  color: #333333;          /* texto oscuro */
+  background-color: #ffffff; /* fondo blanco */
+  border: 1px solid #b1973c; /* borde dorado */
+  border-radius: 6px;
+  padding: 8px;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #b1973c55;
 }
